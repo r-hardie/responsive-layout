@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+body {
+    background-color: #dadada;
+}
+
+header > h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header > nav {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+header > nav > a {
+    background-color: #fff;
+    color: #444442;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+section.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0px;
+}
+
+section.intro > img {
+    width: 70%;
+}
+
+section.intro > p {
+    text-align: center;
+    max-width: 70%;
+    font-size: 4vw;
+}
+
+article h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+article p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+section.portfolio {
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+p#portfolioTitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
+
+section.portfolio img {
+    width: 85%;
+    margin: 10px 7.5% 10px 7.5%;
+    font-size: 1.2em;
+}
+
+section.portfolio h3 {
+    text-align: center;
+    margin: 5px;
+    font-weight: 400;
+}
+
+section.portfolio > div > p {
+    text-align: center;
+    font-size: 15px;
+    max-width: 70%;
+    margin: 15px auto;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+footer h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0px 10px 25px 10px;
+}
+
+footer hr {
+    width: 95%;
+    margin: 50px 2.5% 20px 2.5%;
+    background-color: rgb(48, 48, 48);
+}
+
+p#footerName {
+    float: left;
+    font-size: 13px;
+}
+
+p#backToTop {
+    float: right;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+p#backToTop > a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer nav {
+    display: none;
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        margin: 50px 50px 2% 50px;
+    }
+
+    header > nav {
+        flex-flow: row nowrap;
+        margin: 0 auto 5% auto;
+        width: fit-content;
+    }
+
+    header > nav > a {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0;
+        margin: 0px 10px;
+    }
+
+    section.intro {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+        flex-direction: row;
+    }
+
+    section.intro img {
+        max-width: 45%;
+        margin: 10px;
+        order: 2;
+    }
+
+    section.intro p {
+        max-width: 45%;
+        margin: 20px;
+        text-align: left;
+        font-size: 2vw;
+    }
+
+    section.portfolio {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    p#portfolioTitle {
+        margin: 2%;
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    section.portfolio div {
+        grid-column: span 1;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+
+    p#contactPara {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    p#footerName {
+        margin-left: 50px;
+    }
+
+    p#backToTop {
+        display: none;
+    }
+
+    footer nav {
+        display: block;
+        float: right;
+        margin-right: 50px;
+    }
+
+    footer nav a {
+        text-decoration: none;
+        margin: 5px;
+        padding: 8px;
+        color: #000;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header h1 {
+        float: left;
+        margin: 50px;
+    }
+
+    header nav {
+        float: right;
+        margin: 50px;
+    }
+
+    section.portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    p#portfolioTitle {
+        grid-column: span 3;
+    }
+
+    section.porfolio > div > p {
+        font-size: 1vw;
+    }
+
+    p#contactPara {
+        max-width: 50%;
+        margin-bottom: 40px;
+        font-size: 1.5vw;
+    }
+}
